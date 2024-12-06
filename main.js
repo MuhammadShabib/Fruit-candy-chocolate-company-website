@@ -45,7 +45,7 @@ function showPage(page) {
         img.style.transform = 'translateY(0)';
     });
 
-    document.getElementById('prevPage').style.display = page === 1 ? 'none' : 'inline-block';
+ 
 }
 
 document.getElementById('loadMore').addEventListener('click', () => {
