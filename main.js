@@ -23,7 +23,7 @@ function prevSlide() {
     currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
     showSlide(currentSlide);
 }
-setInterval(nextSlide, 10000);
+setInterval(nextSlide, 5000);
 //////////////////// بخش محصولات
 let currentPage = 1;
 const totalPages = 3; // Total number of product pages
