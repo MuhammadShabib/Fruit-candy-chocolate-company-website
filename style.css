@@ -107,11 +107,8 @@
 
 #About_Us {
     transition: all 0.5s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 200vh;
+
+    
 }
 
 #Contact_Us {
@@ -285,7 +282,7 @@ h1 {
     padding: 60px 0;
     /* width: 80%; */
     margin: auto;
-    margin-top: 80px;
+   
 }
 
 .about-section h1 {
