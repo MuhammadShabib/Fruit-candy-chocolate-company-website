@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Lightbox Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    .gallery-container {
+      position: relative;
+    }
+
+    .gallery {
+      display: flex;
+      flex: 2 3;
+ 
+      gap: 20px;
+      width: 80%;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: transform 0.2s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 80%;
+    }
+
+    .lightbox img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+
+    .close-btn {
+      position: absolute;
+      background-color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      top: 10px;
+      right: 10px;
+    }
+
+    .description {
+      color: white;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .nav-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .nav-btn {
+      background-color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 style="text-align: center;">Responsive Lightbox Image Gallery</h1>
+  <div class="gallery-container">
+    <div class="nav-buttons">
+      <button class="nav-btn" id="prevPageBtn">&#10094; Previous</button>
+      <button class="nav-btn" id="nextPageBtn">Next &#10095;</button>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="close-btn" id="closeBtn">X</button>
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="">
+      <div class="description" id="lightboxDescription"></div>
+    </div>
+  </div>
+
+  <script>
+    const gallery = document.getElementById('gallery');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxDescription = document.getElementById('lightboxDescription');
+    const closeBtn = document.getElementById('closeBtn');
+    const prevPageBtn = document.getElementById('prevPageBtn');
+    const nextPageBtn = document.getElementById('nextPageBtn');
+
+    const images = [
+      { src: '/img/20.jpg', description: 'Description for Image 1' },
+      { src: '/img/20.jpg', description: 'Description for Image 2' },
+      { src: '/img/20.jpg', description: 'Description for Image 3' },
+      { src: '/img/20.jpg', description: 'Description for Image 4' },
+      { src: '/img/20.jpg', description: 'Description for Image 5' },
+      { src: '/img/12.jpg', description: 'Description for Image 6' },
+      { src: '/img/20.jpg', description: 'Description for Image 7' },
+      { src: '/img/20.jpg', description: 'Description for Image 8' },
+      { src: '/img/20.jpg', description: 'Description for Image 9' },
+      { src: '/img/20.jpg', description: 'Description for Image 10' },
+      { src: '/img/12.jpg', description: 'Description for Image 11' },
+      { src: '/img/20.jpg', description: 'Description for Image 12' },
+    ];
+
+    let currentPage = 0;
+    const itemsPerPage = 6;
+
+    function renderGallery() {
+      gallery.innerHTML = '';
+      const start = currentPage * itemsPerPage;
+      const end = start + itemsPerPage;
+      const currentImages = images.slice(start, end);
+
+      currentImages.forEach(img => {
+        const imageElement = document.createElement('img');
+        imageElement.src = img.src;
+        imageElement.alt = img.description;
+        imageElement.setAttribute('data-description', img.description);
+        imageElement.addEventListener('click', () => openLightbox(img));
+        gallery.appendChild(imageElement);
+      });
+    }
+
+    function openLightbox(img) {
+      lightbox.style.display = 'flex';
+      lightboxImage.src = img.src;
+      lightboxDescription.textContent = img.description;
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+    prevPageBtn.addEventListener('click', () => {
+      if (currentPage > 0) {
+        currentPage--;
+        renderGallery();
+      }
+    });
+    nextPageBtn.addEventListener('click', () => {
+      if ((currentPage + 1) * itemsPerPage < images.length) {
+        currentPage++;
+        renderGallery();
+      }
+    });
+
+    renderGallery();
+  </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="Products">
+  <div class="container mt-4">
+      <h1 class="text_products">گالری محصولات</h1>
+      <div class="button-container">
+          <button class="btn" id="prevPage" style="display: none;">محصولات قبلی</button>
+      </div>
+      <div id="gallery">
+          <!-- Initial Products -->
+          <div class="product-container active" id="page1">
+              <div class="row">
+                  <!-- Row 1 -->
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 1" data-details="">
+                          <button class="btn open-lightbox">مشاهده جزئیات</button>
+                      </div>
+                  </div>
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 2" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+                      </div>
+                  </div>
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 3" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                      </div>
+                  </div>
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 4" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                      </div>
+                  </div>
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 5" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                      </div>
+                  </div>
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 6" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="product-container" id="page2">
+              <div class="row">
+                  <!-- Row 1 -->
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 7" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                      </div>
+                  </div>
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 8" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                      </div>
+                  </div>
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 9" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                      </div>
+                  </div>
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 10" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                      </div>
+                  </div>
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 11" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                      </div>
+                  </div>
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 12" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="product-container" id="page3">
+              <div class="row">
+                  <!-- Row 1 -->
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 13" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                      </div>
+                  </div>
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 14" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                      </div>
+                  </div>
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 15" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                      </div>
+                  </div>
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 16" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                      </div>
+                  </div>
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 17" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                      </div>
+                  </div>
+                  <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                      <div class="product">
+                          <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 18" data-details="">
+                                  <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  
+      <div class="text-center mt-4">
+          <button class="btn" id="loadMore">بارگذاری محصولات جدید</button>
+      </div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+      <span class="lightbox-close" id="lightboxClose">&times;</span>
+      <img id="lightboxImage" src="" alt="Product Image">
+      <p id="lightboxDetails" style="color: white; text-align: center;"></p>
+  </div>
+</section>

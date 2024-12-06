@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>شرکت صنایع غذایی</title>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">
+                <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="">
+            </div>
+            <div class="links">
+                <a href="#home">خانه</a>
+                <a href="#Products">محصولات</a>
+                <a href="#About_Us">درباره ما</a>
+                <a href="#Contact_Us">تماس با ما</a>
+
+            </div>
+
+        </div>
+    </div>
+    </header>
+    <section id="home" class="overflow-hidden" data-aos="fade-up" data-aos-delay="10">
+        <div class="container_slider">
+            <div class="slideshow-container">
+                <div class="slide active">
+                    <img src="./img/20.jpg" alt="Photo 1">
+                </div>
+                <!-- <div class="slide">
+                    <img src="./img/20.jpg" alt="Photo 1">
+
+                </div> -->
+
+                <div class="controls">
+                    <button id="prevBtn" onclick="prevSlide()"></button>
+                    <button id="nextBtn" onclick="nextSlide()"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Products" >
+        <div class="container mt-4">
+            <h1 class="text_products overflow-hidden" data-aos="fade-up" data-aos-delay="30">گالری محصولات</h1>
+            <div class="push">
+                <div class="button-container">
+                    <button class="btn1" id="prevPage" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                        </svg></button>
+                </div>
+                <div id="gallery">
+                    <!-- Initial Products -->
+                    <div class="product-container active" id="page1">
+                        <div class="row overflow-hidden" data-aos="zoom-out" data-aos-delay="90">
+                            <!-- Row 1 -->
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 1" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+                                </div>
+                            </div>
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 2" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+                                </div>
+                            </div>
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 3" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                                </div>
+                            </div>
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 4" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                                </div>
+                            </div>
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 5" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                                </div>
+                            </div>
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 6" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-container" id="page2">
+                        <div class="row">
+                            <!-- Row 1 -->
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 7" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                                </div>
+                            </div>
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 8" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                                </div>
+                            </div>
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 9" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                                </div>
+                            </div>
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 10" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                                </div>
+                            </div>
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 11" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                                </div>
+                            </div>
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 12" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-container" id="page3">
+                        <div class="row">
+                            <!-- Row 1 -->
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 13" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                                </div>
+                            </div>
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 14" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                                </div>
+                            </div>
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 15" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                                </div>
+                            </div>
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 16" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                                </div>
+                            </div>
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 17" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                                </div>
+                            </div>
+                            <div class="product_img col-xl-4 col-md-3 col-sm-4 col-6">
+                                <div class="product">
+                                    <img src="./img/photo_2024-11-21_11-38-44.jpg" alt="محصول 18" data-details="">
+                                    <button class="btn open-lightbox">مشاهده جزئیات</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="text-center mt-4">
+                    <button class="btn1" id="loadMore"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                        </svg></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="lightbox overflow-hidden" id="lightbox" data-aos="zoom-out" data-aos-delay="90">
+            <span class="lightbox-close" id="lightboxClose">&times;</span>
+            <img id="lightboxImage" src="" alt="Product Image">
+            <p id="lightboxDetails" style="color: white; text-align: center;"></p>
+        </div>
+    </section>
+    <section id="About_Us" class="text-center overflow-hidden" data-aos="zoom-out" data-aos-delay="90">
+        <div class="container_tem  about-section">
+            <h1 class="text-center overflow-hidden" data-aos="zoom-out" data-aos-delay="90">درباره شرکت ما</h1>
+            <p class="text-center">شرکت ما با هدف ارائه بهترین خدمات و محصولات به مشتریان عزیز تاسیس شده است. تیم ما
+                متشکل از افراد متخصص و با تجربه است که با عشق و پشتکار در راستای دستیابی به اهداف شرکت کار می‌کنند.</p>
+
+            <h2 class="text-center">چشم‌انداز ما</h2>
+            <p class="text-center">ما به دنبال ایجاد ارزش افزوده برای مشتریان خود و ارتقاء کیفیت زندگی افراد جامعه
+                هستیم. هدف ما تبدیل شدن به یکی از پیشگامان صنعت خود در سطح بین‌المللی است.</p>
+
+            <h2 class="text-center">تیم ما</h2>
+            <div class="row team">
+                <div class="col-md-4 team-member ">
+
+                    <img src="./img/12.jpg" alt="عضو تیم 1">
+                    <h5>نام مدیر عامل </h5>
+                    <p>مدیر عامل </p>
+                </div>
+
+                <div class="col-md-4 team-member ">
+                    <img src="./img/12.jpg" alt="عضو تیم 2">
+                    <h5>نام رئیس</h5>
+                    <p>مدیر بازاریابی</p>
+                </div>
+                <div class="spicial col-md-4 team-member ">
+                    <img src="./img/12.jpg" alt="عضو تیم 3">
+                    <h5> نام مدیر اجرائه</h5>
+                    <p> مدیر اجرائه</p>
+                </div>
+            </div>
+            <div class="row team1 ">
+                <div class="col-md-4 team-member ">
+                    <img src="./img/12.jpg" alt="عضو تیم 2">
+                    <h5>نام رئیس</h5>
+                    <p>مدیر بازاریابی</p>
+                </div>
+                <div class="col-md-4 team-member ">
+
+                    <img src="./img/12.jpg" alt="عضو تیم 1">
+                    <h5>نام مدیر عامل </h5>
+                    <p>مدیر عامل </p>
+                </div>
+
+
+                <div class="spicial col-md-4 team-member ">
+                    <img src="./img/12.jpg" alt="عضو تیم 3">
+                    <h5> نام مدیر اجرائه</h5>
+                    <p> مدیر اجرائه</p>
+                </div>
+            </div>
+            <div class="work-space">
+
+                <h2 class="text-center">فضای کار ما</h2>
+                <img src="./img/photo_2024-11-21_11-39-40.jpg" alt="فضای کار" class="img-fluid">
+                <p class="text-center">ما در یک محیط کاری خلاق و انگیزشی کار می‌کنیم که به همکاری و نوآوری ارزش می‌دهد.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="Contact_Us">
+        <footer>
+            <div class="container overflow-hidden" data-aos="zoom-out" data-aos-delay="90">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>درباره ما</h5>
+                        <p>شرکت ما با هدف ارائه بهترین خدمات و محصولات به مشتریان عزیز تاسیس شده است. ما به مشتریان خود
+                            اهمیت می‌دهیم و همیشه در تلاش برای بهبود خدمات هستیم.</p>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <h5>تماس با ما</h5>
+                        <p>ایمیل: <a href="mailto:mirwaishussaini@yahoo.com"
+                                style="color: #ffc107;">mirwaishussaini@yahoo.com</a></p>
+                        <p>شماره مبایل همراه: 0799365112</p>
+                        <p> شماره مبایل شرکت: 0799333131</p>
+                        <p> شماره مبایل منزل: 0700194747 </p>
+                        <p>آدرس :شرک صنعتی فاز 1</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container overflow-hidden">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26398.883108026483!2d62.191103491187725!3d34.20104337279893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f3cdb9f61feae0f%3A0x891e95514fe70352!2sHerat%20Industrial%20Town%2C%20Guzara%2C%20Afghanistan!5e0!3m2!1sen!2s!4v1732175119406!5m2!1sen!2s"
+                    width="100%" height="300" style="border:0; overflow: hidden;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div style="background-color: #495057; text-align: center; padding: 10px 0;">
+                <p class="mb-0">کلیه حقوق گپی مربوط به شرکت میرویس یوسف است &copy; 2024</p>
+                <div>
+                    <a href="https://facebook.com" target="_blank" class="fab fa-facebook icons"></a>
+                    <a href="https://instagram.com" target="_blank" class="fab fa-instagram icons"></a>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="./main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+
+</body>
+
+</html>

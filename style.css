@@ -1,0 +1,418 @@
+@font-face {
+    font-family: 'yekan';
+    src: url('Yekan\ Bakh.ttf');
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: ltr;
+    font-family: 'yekan' !important;
+  
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.logo img {
+    width: 50px;
+    border-radius: 5px;
+
+}
+
+.logo {
+    margin: 0 0 0 10px;
+}
+
+.navbar .links {
+    display: flex;
+    /* چینش افقی لینک‌ها */
+
+}
+
+.navbar a {
+    color: #000;
+    text-decoration: none;
+    /* حذف خط زیر لینک‌ها */
+    margin: 0 10px;
+    font-size: 18px;
+    /* اندازه فونت */
+
+}
+
+.navbar a:hover {
+
+    text-decoration: none;
+    color: rgba(10, 10, 10, 0.799);
+}
+
+/* navbar style  */
+.container_slider {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    /* Change transition order */
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    /* Keep active slide in place */
+}
+
+.slide.next {
+    opacity: 1;
+    transform: translateX(100%);
+    /* Move next slide in from right */
+}
+
+.slide.prev {
+    opacity: 1;
+    transform: translateX(-100%);
+    /* Move previous slide in from left */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#home {
+    transition: all 0.5s ease-in-out;
+}
+
+#Products {
+    transition: all 0.5s ease-in-out;
+    height: 95vh;
+}
+
+#About_Us {
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
+}
+
+#Contact_Us {
+    transition: all ease-in-out .5s;
+}
+
+
+
+/* بخش محصولات */
+
+
+.push {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.container {
+    /* max-width: 1200px; */
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-container {
+    display: none;
+}
+
+.product-container.active {
+    display: block;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product_img {
+    width: calc(33% - 10px);
+    /* 3 items per row */
+    margin-bottom: 15px;
+    opacity: 0;
+    /* Start hidden */
+    transform: translateY(20px);
+    /* Start slightly below */
+    animation: fadeInUp 0.5s forwards;
+    /* Animation */
+    margin-top: 1rem;
+}
+
+/* Animation for products */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    height: 300px;
+
+}
+
+
+
+.product img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s;
+    
+}
+
+.product img:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+
+    border-radius: 5px;
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; */
+    border: 1px solid #000000 !important;
+    border-radius: 20px !important;
+
+}
+
+.open-lightbox {
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 10;
+    /* Ensure it's above the image */
+}
+
+.btn:hover {
+    scale: 1.1;
+    transition: all ease-in-out .3s;
+}
+
+#prevPage {
+
+    margin: 20px;
+    color: #000;
+}
+
+.btn1 {
+    border-radius: 50%;
+    background-color: white;
+    border: none !important;
+    outline: none !important;
+    font-size: 50px;
+}
+
+
+/* Optionally, style the load more button */
+#loadMore {
+    color: #000;
+    margin: 20px;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    width: 60%;
+    margin-bottom: 25px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+/* /////////////about */
+.about-section {
+    padding: 60px 0;
+    /* width: 80%; */
+    margin: auto;
+    margin-top: 80px;
+}
+
+.about-section h1 {
+    margin-bottom: 30px;
+}
+
+.about-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+.team-member {
+    text-align: center;
+    margin: 20px 0;
+    flex: 1;
+}
+
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.img-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team1 {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .team1 {
+        display: flex !important;
+    }
+
+    .team {
+        display: none !important;
+    }
+
+    #About_Us {
+
+        height: auto;
+    }
+
+
+
+    .open-lightbox {
+        width: 120px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
+/* /////////////////footer */
+.icons {
+    font-size: 2rem;
+    margin: 10px;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: right;
+}
+
+.map-container {
+    height: 300px;
+    /* ارتفاع نقشه */
+}
+
+@media (max-width: 1224px) {
+    #lightbox img {
+        width: 60%;
+        height: 50%;
+
+    }
+
+}
+
+@media (max-width: 1024px) {
+    #lightbox img {
+        width: 60%;
+        height: 50%;
+
+    }
+
+}
+
+@media (max-width: 920px) {
+    #lightbox img {
+        width: 90%;
+        height: 70%;
+
+    }
+
+}
+
+@media (max-width: 820px) {
+    #lightbox img {
+        width: 70%;
+        height: 50%;
+
+    }
+
+}
+
+@media (max-width: 420px) {
+    #lightbox img {
+        width: 70%;
+        height: 50%;
+
+    }
+
+}
