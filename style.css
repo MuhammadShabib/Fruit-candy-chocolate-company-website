@@ -10,9 +10,15 @@
     box-sizing: border-box;
     direction: ltr;
     font-family: 'yekan' !important;
-  
+
 }
 
+.header {
+background: url('/img/Leonardo_Lightning_XL_There_should_be_a_picture_of_a_chocolate_0.jpg');
+}
+.links{
+    direction: rtl;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -20,6 +26,7 @@
     padding: 10px 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+    background-color: #d2d2d25c;
 }
 
 .logo img {
@@ -107,8 +114,9 @@
 
 #About_Us {
     transition: all 0.5s ease-in-out;
+    padding: 30px;
 
-    
+
 }
 
 #Contact_Us {
@@ -164,6 +172,9 @@ h1 {
     margin-top: 1rem;
 }
 
+
+
+
 /* Animation for products */
 @keyframes fadeInUp {
     to {
@@ -186,7 +197,7 @@ h1 {
     width: 100%;
     height: auto;
     transition: transform 0.2s;
-    
+
 }
 
 .product img:hover {
@@ -275,14 +286,14 @@ h1 {
     cursor: pointer;
 }
 
-
-
 /* /////////////about */
 .about-section {
     padding: 60px 0;
     /* width: 80%; */
     margin: auto;
-   
+    margin-left: 20px;
+    margin-right: 20px;
+
 }
 
 .about-section h1 {
@@ -295,8 +306,17 @@ h1 {
     border-radius: 10px;
     margin-bottom: 20px;
 }
+.about-us1{
+    background: #3e3c3c65;
+    box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+}
 
-
+.t1{
+    margin-top: 40px;
+}
 
 .team-member {
     text-align: center;
@@ -312,19 +332,20 @@ h1 {
     margin-bottom: 10px;
 }
 
-.img-fluid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .team1 {
     display: none !important;
 }
 
+.work-space{
+    text-align: center;
+}
 @media (max-width: 768px) {
     .team1 {
         display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: wrap;
     }
 
     .team {
@@ -345,8 +366,6 @@ h1 {
         justify-content: center;
         align-items: center;
     }
-
-
 }
 
 /* /////////////////footer */

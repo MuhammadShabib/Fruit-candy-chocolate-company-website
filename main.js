@@ -35,7 +35,7 @@ function showPage(page) {
     currentContainer.classList.add('active');
 
     // Reset animation
-    const productImages = currentContainer.querySelectorAll('.product_img col-xl-4 col-md-3 col-sm-4 col-6');
+    const productImages = currentContainer.querySelectorAll('.product_img col-xl-4 col-md-6 col-sm-5 col-12');
     productImages.forEach((img, index) => {
         img.style.animationDelay = `${index * 0.1}s`; // Stagger effect
         img.style.opacity = '0';
