@@ -47,7 +47,7 @@ function showPage(page) {
         img.style.transform = 'translateY(0)';
     });
 
- 
+
 }
 
 document.getElementById('loadMore').addEventListener('click', () => {
@@ -96,31 +96,27 @@ showPage(currentPage);
 
 
 
-// 
 // change image in mobile mode
 
 
-   // Select all images with the class "responsive-image"
-   const images = document.querySelectorAll(".sli");
+const images = document.querySelectorAll(".sli");
 
-   // Define the media query for mobile screens
-   const mobileQuery = window.matchMedia("(max-width: 768px)");
+const mobileQuery = window.matchMedia("(max-width: 768px)");
 
-   // Function to update the image sources
-   function updateImageSources(e) {
-     images.forEach((image, index) => {
-       if (e.matches) {
-         // For mobile screens
-         image.src = `./img/900x7001.png`; // Mobile-specific images
-       } else {
-         // For larger screens
-         image.src = `./img/2500.png`; // Desktop-specific images
-       }
-     });
-   }
+function updateImageSources(e) {
+    images.forEach((image, index) => {
+        if (e.matches) {
+            // For mobile screens
+            image.src = `./img/900x7001.png`; // Mobile-specific 
+        } else {
+            // For larger screens
+            image.src = `./img/2500.png`; // Desktop-specific 
+        }
+    });
+}
 
-   // Listen for changes in screen size
-   mobileQuery.addEventListener("change", updateImageSources);
+// Listen for changes in screen size
+mobileQuery.addEventListener("change", updateImageSources);
 
-   // Initial check
-   updateImageSources(mobileQuery);
+// Initial check
+updateImageSources(mobileQuery);
