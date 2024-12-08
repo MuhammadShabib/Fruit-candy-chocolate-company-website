@@ -15,6 +15,14 @@
 
 .header {
     background: url('/img/Leonardo_Lightning_XL_There_should_be_a_picture_of_a_chocolate_0.jpg');
+    overflow: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+
+#home,.header,.slide{
+    overflow: hidden;
 }
 
 .links {
@@ -211,8 +219,10 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     /* transition: background-color 0.3s ease; */
-    border: 1px solid #000000 !important;
+    border: 1px solid #ffffff !important;
     border-radius: 20px !important;
+    color: #ddd !important;
+    font-weight: bold !important;
 
 }
 
@@ -230,6 +240,7 @@ h1 {
     padding: 5px 10px;
     cursor: pointer;
     z-index: 10;
+    color: #ddd;
     /* Ensure it's above the image */
 }
 
@@ -291,7 +302,7 @@ h1 {
 /* /////////////about */
 .about-section {
     padding: 60px 0;
-    /* width: 80%; */
+    width: 100%;
     margin: auto;
     margin-left: 20px;
     margin-right: 20px;
@@ -316,7 +327,7 @@ h1 {
     margin: 10px;
     margin: auto;
     border-radius: 20px;
-    width: 60%;
+    width: 70%;
     margin-bottom: 20px;
 }
 
@@ -440,6 +451,39 @@ footer {
         width: 70%;
         height: 50%;
 
+    }
+
+}
+
+
+
+
+
+/* //////////////////////////////////////////// */
+.text_weight{
+    font-weight: bolder;
+}
+.text_products{
+    margin: 3rem 0;
+}
+.matin_top{
+    margin: 3rem 0 !important;
+
+}
+
+
+@media (min-width: 1000px) {
+    .text_about{
+        font-size: 2rem !important;
+    }
+    .text_eye{
+        font-size: 2rem !important;
+    }
+    .info_header{
+        font-size: 1.5rem !important;
+    }
+    .info_p{
+    font-size: 2rem !important;
     }
 
 }
