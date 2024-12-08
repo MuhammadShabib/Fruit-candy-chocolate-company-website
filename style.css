@@ -15,11 +15,8 @@
 
 .header {
     background: url('/img/Leonardo_Lightning_XL_There_should_be_a_picture_of_a_chocolate_0.jpg');
-    overflow: hidden;
 }
-body{
-    overflow-x: hidden;
-}
+
 
 #home,.header,.slide{
     overflow: hidden;
@@ -359,6 +356,7 @@ h1 {
 
 .work-space {
     text-align: center;
+    /* width: 90%; */
 }
 
 .right{
@@ -395,6 +393,7 @@ h1 {
         width: 95%;
 
     }
+
 }
 
 /* /////////////////footer */

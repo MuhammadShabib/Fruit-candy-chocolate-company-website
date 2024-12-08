@@ -1,3 +1,5 @@
+
+
 // اسلایدشو
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
@@ -89,3 +91,36 @@ document.getElementById('lightbox').addEventListener('click', (event) => {
 });
 // Show first page initially
 showPage(currentPage);
+
+
+
+
+
+// 
+// change image in mobile mode
+
+
+   // Select all images with the class "responsive-image"
+   const images = document.querySelectorAll(".sli");
+
+   // Define the media query for mobile screens
+   const mobileQuery = window.matchMedia("(max-width: 768px)");
+
+   // Function to update the image sources
+   function updateImageSources(e) {
+     images.forEach((image, index) => {
+       if (e.matches) {
+         // For mobile screens
+         image.src = `./img/900x7001.png`; // Mobile-specific images
+       } else {
+         // For larger screens
+         image.src = `./img/2500.png`; // Desktop-specific images
+       }
+     });
+   }
+
+   // Listen for changes in screen size
+   mobileQuery.addEventListener("change", updateImageSources);
+
+   // Initial check
+   updateImageSources(mobileQuery);
