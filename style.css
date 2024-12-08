@@ -198,6 +198,8 @@ h1 {
     overflow: hidden;
     border: 1px solid #ddd;
     border-radius: 8px;
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2);
+
     transition: transform 0.2s;
 }
 
