@@ -17,14 +17,11 @@
     background: url('/img/Leonardo_Lightning_XL_There_should_be_a_picture_of_a_chocolate_0.jpg');
     overflow: hidden;
 }
-
-body {
+body{
     overflow-x: hidden;
 }
 
-#home,
-.header,
-.slide {
+#home,.header,.slide{
     overflow: hidden;
 }
 
@@ -362,10 +359,9 @@ h1 {
     text-align: center;
 }
 
-.right {
+.right{
     margin-bottom: 20px !important;
 }
-
 @media (max-width: 768px) {
     .team1 {
         display: flex !important;
@@ -393,9 +389,8 @@ h1 {
     }
 
     .about-us1 {
-        margin: auto;
-        margin-left: -20px;
-        width: 100%;
+
+        width: 95%;
 
     }
 }
@@ -468,35 +463,30 @@ footer {
 
 
 /* //////////////////////////////////////////// */
-.text_weight {
+.text_weight{
     font-weight: bolder;
 }
-
-.text_products {
+.text_products{
     margin: 3rem 0;
 }
-
-.matin_top {
+.matin_top{
     margin: 3rem 0 !important;
 
 }
 
 
 @media (min-width: 1000px) {
-    .text_about {
+    .text_about{
         font-size: 2rem !important;
     }
-
-    .text_eye {
+    .text_eye{
         font-size: 2rem !important;
     }
-
-    .info_header {
+    .info_header{
         font-size: 1.5rem !important;
     }
-
-    .info_p {
-        font-size: 2rem !important;
+    .info_p{
+    font-size: 2rem !important;
     }
 
 }
