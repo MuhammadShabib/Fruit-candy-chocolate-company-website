@@ -58,7 +58,7 @@
     color: #000;
     text-decoration: none;
     /* حذف خط زیر لینک‌ها */
-    margin: 0 10px;
+    margin: 0 7px;
     font-size: 18px;
     /* اندازه فونت */
 
@@ -123,7 +123,7 @@
 
 #About_Us {
     transition: all 0.5s ease-in-out;
-    padding: 30px;
+    padding: 10px;
 
 
 }
@@ -305,8 +305,7 @@ h1 {
     padding: 60px 0;
     width: 100%;
     margin: auto;
-    margin-left: 20px;
-    margin-right: 20px;
+
 
 }
 
@@ -391,9 +390,10 @@ h1 {
         align-items: center;
     }
 
+
     .about-us1 {
 
-        width: 95%;
+        width: 98% !important;
 
     }
     #home,
@@ -415,6 +415,7 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: right;
+    overflow: hidden;
 }
 
 .map-container {
@@ -460,7 +461,7 @@ footer {
 
 @media (max-width: 420px) {
     #lightbox img {
-        width: 70%;
+        width: 80%;
         height: 50%;
 
     }
