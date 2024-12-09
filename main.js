@@ -28,7 +28,7 @@ function prevSlide() {
 setInterval(nextSlide, 5000);
 //////////////////// بخش محصولات
 let currentPage = 1;
-const totalPages = 3; // Total number of product pages
+const totalPages = 6; // Total number of product pages
 function showPage(page) {
     document.querySelectorAll('.product-container').forEach(container => {
         container.classList.remove('active');
