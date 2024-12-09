@@ -14,7 +14,12 @@
 }
 
 .header {
-    background: url('/img/Leonardo_Lightning_XL_There_should_be_a_picture_of_a_chocolate_0.jpg');
+    z-index: 999;
+    background-color: #d2d2d200;
+    width: 90%;
+    margin: 0 auto;
+
+
 }
 
 
@@ -32,34 +37,38 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 15px;
+    padding: 10px 40px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    background-color: #d2d2d25c;
 }
 
 .logo img {
     width: 50px;
-    border-radius: 5px;
+    height: 50px;
+    border-radius: 50%;
 
 }
 
 .logo {
     margin: 0 0 0 10px;
+
 }
 
 .navbar .links {
     display: flex;
-    /* چینش افقی لینک‌ها */
+    justify-content: space-between;
 
 }
 
 .navbar a {
-    color: #000;
+    color: #fff;
     text-decoration: none;
-    /* حذف خط زیر لینک‌ها */
-    margin: 0 7px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 4px 20px;
+    margin-right: 10px;
     font-size: 18px;
+    cursor: pointer;
     /* اندازه فونت */
 
 }
@@ -67,7 +76,8 @@
 .navbar a:hover {
 
     text-decoration: none;
-    color: rgba(10, 10, 10, 0.799);
+    color: rgb(255, 255, 255);
+
 }
 
 /* navbar style  */
@@ -114,6 +124,7 @@
 
 #home {
     transition: all 0.5s ease-in-out;
+    margin-top: -80px;
 }
 
 #Products {
@@ -396,11 +407,20 @@ h1 {
         width: 98% !important;
 
     }
+
     #home,
     .header,
     .slide {
         overflow: hidden !important;
     }
+    .header {
+    
+     
+        width: 100%;
+    
+    
+    }
+    
 
 }
 
@@ -463,6 +483,31 @@ footer {
     #lightbox img {
         width: 80%;
         height: 50%;
+
+
+    }
+
+    .navbar {
+        background-color: #d2d2d25c;
+
+    }
+
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 20px;
+        padding: 0px 7px;
+        margin-right: 2px;
+        font-size: 18px;
+        cursor: pointer;
+        /* اندازه فونت */
+
+    }
+
+    .navbar .links {
+        display: flex;
+        justify-content: center;
 
     }
 
